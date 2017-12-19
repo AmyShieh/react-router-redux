@@ -93,7 +93,7 @@
     "presets": [
       "react-app"
     ],
-    "plugins":[
+    "plugins": [
       "transform-decorators-legacy"
     ]
   },
