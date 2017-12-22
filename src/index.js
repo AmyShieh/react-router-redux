@@ -8,10 +8,13 @@ import {BrowserRouter,
         Redirect,
         Switch} from 'react-router-dom'
 
-// import reducer from './reducer'
+import reducer from './reducer'
 import App from './App';
+import AuthRoute from './component/authroute/authroute';
 import Login from './container/login/login.js';
 import Register from './container/register/register';
+
+import 'antd-mobile/dist/antd-mobile.css';
 
 //
 // const store = createStore(reducer,compose(
@@ -22,12 +25,14 @@ import Register from './container/register/register';
 // ))
 
 ReactDOM.render(
-    (<Provider>
+    (<Provider >
         <BrowserRouter>
             <div>
+                <AuthRoute></AuthRoute>
                 <Route path='/login' component={Login}></Route>
                 <Route path='/register' component={Register}></Route>
             </div>
         </BrowserRouter>
     </Provider>),
-    document.getElementById('root'));
+    document.getElementById('root')
+);
